@@ -1,0 +1,12 @@
+<form action="/edit" method="post">
+  {{#allCards}}
+  <input type="text" name="name" value="{{name}}">
+  <input type="text" name="skill" value="{{skill}}">
+  <input type="text" name="hp" value="{{hp}}">
+  {{#type}}
+  <input type="text" name="elementDamage" value="{{elementDamage}}">
+  <input type="text" name="weakness" value="{{weakness}}">
+  {{/type}}
+  <button type="submit" name="button" value="{{_id}}">Submit</button>
+  {{/allCards}}
+</form>

@@ -1,0 +1,24 @@
+<div>
+  <form action="/" method="post">
+    <input type="text" name="name" placeholder="Pokemon Name">
+    <input type="text" name="skill" placeholder="skills">
+    <input type="text" name="hp"placeholder="hp">
+    <input type="text" name="elementDamage" placeholder="Element Damage">
+    <input type="text" name="weakness" placeholder="Elemental Weakness">
+    <button type="submit" name="button">Submit</button>
+  </form>
+</div>
+{{#allCards}}
+<p>Pokemon Name: {{name}}</p>
+<p>skills: {{skill}} </p>
+<p>hp: {{hp}}</p>
+{{#type}}
+<p>Elemental Damage: {{elementDamage}}</p>
+<p>Elemental Weakness: {{weakness}}</p>
+{{/type}}
+<form action="/{{_id}}/delete" method="post">
+  <button type="submit">Delete</button>
+</form>
+<p><a href="/{{_id}}/edit">Edit</a></p>
+<hr>
+{{/allCards}}
